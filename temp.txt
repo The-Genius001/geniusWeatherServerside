@@ -1,0 +1,23 @@
+
+   
+   fs.writeFile(fileName, JSON.stringify(file), function writeJSON(err) {
+      if (err) return console.log(err);
+      console.log(file);
+      
+      
+   });
+   fs.readFile( __dirname + "/" + "weather.json", 'utf8', function (err, data) {
+      res.end(JSON.stringify(file));
+      console.log("done!");
+      clearData();
+      
+   });
+
+   fs.writeFile(fileName, JSON.stringify({
+      "forcast": {
+      
+      }, "warnings":{
+      
+   }}), function writeJSON(err) {
+      if (err) return console.log(err);
+   });
